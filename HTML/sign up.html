@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lad&Gen</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../Pictures/index/logosmall.png" />
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/sign up.css" />
+    <script src="../JS/sign up.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.14/sweetalert2.all.min.js"></script>
+    <script src="../JS/angular.min.js"></script>
+    <script src="../assets/js/jquery-2.1.0.min.js"></script>
+    <script src="../assets/js/owl-carousel.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <link rel="stylesheet" href="../assets/css/ladgen.css">
+  </head>
+  <body ng-app="">
+    <div ng-include="'./header.html'"></div>
+    <div class="layout-signup">
+    <p class="section-signup layout-signup-item">Sign Up</p>
+    <div class="layout-signup-item img-signup"><img src="../Pictures/contactUs/Retail Interior.jpg" alt=""></div>
+    <div class="section-form layout-signup-item">
+      <form name="myForm">
+        <table>
+          <tr>
+            <td>
+              <input class="signup-input" id="username" type="text" placeholder="Full Name" name="name" ng-model="name" ng-Minlength="3" ng-Maxlength="6" ng-required />
+          </tr>
+          <tr>
+            <td><input class="signup-input" id="email" type="email" placeholder="Email" name="Input" ng-model="Input" ng-Minlength="6" ng-Maxlength="18" />
+          </tr>
+          <tr>
+            <td>
+              <input class="signup-input" id="phone" type="number" placeholder="Phone" name="number" ng-model="number" ng-min="0" ng-max="100000000000"  />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input class="signup-input" id="password" type="password" placeholder="Password" name="pass" ng-model="pass" ng-Minlength="6" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input class="signup-input" id="confirm" type="password" placeholder="Confirm Password" ng-Minlength="6" />
+            </td>
+          </tr>
+          <tr>
+            <td class="signup-agree">By continuing, you agree to Lad&Gen's Terms of Service and acknowledge you've read our Privacy Policy</td>
+          </tr>
+          <tr>
+            <td class="center">
+              <button  type="submit" class="btn-signup" onclick="checksubmit()">Sign Up</button>
+            </td>
+            <tr>
+              <td class="signup-or">Or you log in with</td>
+            </tr>
+          </tr>
+          
+          <tr>
+            <td class="center">
+              <ul class="log">
+              <li class="logo-contact"><a href="#" class="fa fa-facebook fa-item"></a></li>
+              <li class="logo-contact"><a href="#" class="fa fa-twitter fa-item"></a></li>
+              <li class="logo-contact"><a href="#" class="fa fa-google"></a></li>
+            </ul>
+          </tr>
+          <tr>
+            <td>
+              <hr class="signup-hr">
+            </td>
+          </tr>
+          <tr>
+            <td class="signup-forgot"><a href="../HTML/login.html" >Already have account?</a></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>      
+    <div ng-include="'./footer.html'"></div>
+  </body>
+
+<script>
+  function checksubmit(){
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirm = document.getElementById("confirm").value;
+        var phone = document.getElementById("phone").value;
+        if (!username || !email || !password || !phone || !confirm){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: 'Please input full information'
+            })
+        }else if(password != confirm){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: 'Password and confirm password is not same'
+            })
+        }else{
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Sign up successfully!',
+                    confirmButtonText: 'Log in now'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location="../HTML/login.html";
+                }
+            })
+        }
+}
+</script>
+
+</html>

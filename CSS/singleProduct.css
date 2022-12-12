@@ -1,0 +1,222 @@
+.layout-single-product{
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    margin-left: 120px;
+    margin-right: 120px;
+    gap: 50px;
+}
+
+.layout-single-product-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.similar-product{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 120px;
+    margin-right: 120px;
+    gap: 20px;
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    color: brown;
+}
+
+.product-title {
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+
+.old-price{
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.old-price-discount {
+    font-weight: 600;
+    font-size: 20px;
+    color: red;
+}
+
+.new-price {
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.text-secondary{
+    font-size: 17px;
+    padding-bottom: 10px;
+    font-style: italic;
+}
+
+.details-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #757575;
+    padding-bottom: 5px;
+}
+
+.product-details2{
+    margin-bottom: 15px;
+}
+
+.product-details li{
+    list-style:inside;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.product-details{
+    margin-bottom: 10px;
+}
+
+
+.description2{
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+.description{
+    font-size: 20px;
+    padding-bottom: 50px;
+    color: black;
+}
+
+
+.description:visited{
+    color: black;
+}
+
+.buttons{
+    display: flex;
+}
+
+.button {
+    background-color: white; /* Green */
+    border: none;
+    color: black;
+    font-size: 35px;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.button-item{
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+  }
+
+.button-item a{
+    color: black;
+}
+
+.button-item a:hover{
+    color: black;
+}
+
+.button-item:hover {
+    background-color: #e7e7e7;
+    color: black;
+}
+  
+.button2 {
+    background-color: white; /* Green */
+    border: grey solid 0.1px;
+    padding:5px 10px 5px 10px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.details-title2{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #757575;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.questions{
+    border-top: 1px solid rgb(212, 210, 210);
+    padding: 15px 15px 15px 0px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.questions2{
+    border-bottom: 1px solid rgb(212, 210, 210);;
+    padding: 15px 15px 20px 0px;
+    font-size: 18px;
+}
+
+.icon{
+    padding-right: 10px;
+    font-size: 35px;
+}
+
+.icon2{
+    padding-right: 10px;
+    font-size: 33px;
+}
+
+.title{
+    padding: 10px 10px 5px 10px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+.title a{
+    color: black;
+}
+
+.title a:visited{
+    color: black;
+}
+
+.price {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+hr{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 82%;
+}
+
+.similar{
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 50px;
+}
+.layout-single-product-img button{
+    border: none;
+}

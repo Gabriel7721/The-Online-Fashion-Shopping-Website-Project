@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lad&Gen</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../Pictures/index/logosmall.png" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/login.css" />
+    <script src="../JS/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.14/sweetalert2.all.min.js"></script>
+    <script src="../JS/angular.min.js"></script>
+    <script src="../assets/js/jquery-2.1.0.min.js"></script>
+    <script src="../assets/js/owl-carousel.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <link rel="stylesheet" href="../assets/css/ladgen.css">
+  </head>
+
+<body ng-app="">
+  <div ng-include="'./header.html'"></div>
+  <div class="layout-login">
+  <p class="section-login layout-login-item">Log In</p>
+  <div class="layout-login-item img-login"><img src="../Pictures/contactUs/2f0b91d5169ce6c875278ebda3299d6b.jpg" alt=""></div>
+  <div class="section-form layout-login-item">
+    <form name="myForm">
+      <table>
+        <tr>
+          <td>
+            <input class="login-input" id="username" type="text" name="name" ng-model="name" ng-Minlength="3" placeholder="Username" />
+        </tr>
+        <tr>
+          <td><input class="login-input" id="password" type="password" placeholder="Password" name="pass" ng-model="pass" ng-Minlength="6">
+        </tr>
+        <tr>
+          <td class="login-forgot"><a href="../index.html" >Forgotten password?</a></td>
+        </tr>
+        <tr>
+          <td class="center">
+            <button  type="submit" class="btn-login1" onclick="checksubmit()">Login</button>
+          </td>
+          <tr>
+            <td class="login-or">Or you can log in with</td>
+          </tr>
+        </tr>
+        
+        <tr>
+          <td class="center">
+            <ul class="log">
+            <li class="logo-contact"><a href="https://www.facebook.com/" class="fa fa-facebook fa-item"></a></li>
+            <li class="logo-contact"><a href="https://twitter.com/" class="fa fa-twitter fa-item"></a></li>
+            <li class="logo-contact"><a href="https://www.google.com/" class="fa fa-google"></a></li>
+          </ul>
+        </tr>
+        <tr>
+          <td>
+            <hr class="login-hr">
+          </td>
+        </tr>
+        <tr>
+          <td class="center">
+            <a href="../HTML/sign up.html"><input class="btn-login2" type="button" value="Create New Account"></a>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+  <div ng-include="'./footer.html'"></div>
+</body>
+
+<script>
+  function checksubmit(){
+    var username = document.getElementById("username").value;
+    var password= document.getElementById("password").value;
+    if(!username || !password){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            html: 'Please input full information'
+        })
+    }else{
+            Swal.fire({
+                icon: 'success',
+                title: 'Log in successfully',
+        }).then((result) => {
+            if (result.isConfirmed) {
+              window.location="../index.html";
+            }
+        })
+    }
+};
+</script>
+
+</html>
